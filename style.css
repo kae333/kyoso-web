@@ -1,5 +1,4 @@
 /* CSS styles for the Sea Otter website */
-
 /* Set a soothing background color and font for the body */
 body {
     background: linear-gradient(to bottom, #e6f7ff, #f5fbff); /* Light ocean-like color */
@@ -9,46 +8,34 @@ body {
     color: #1e293b; /* Darker color for text */
     line-height: 1.8; /* Improve readability */
 }
-
 /* Style for the header section */
 header {
     text-align: center;
-
     padding: 40px 20px;
-
     background:
         linear-gradient(
             rgba(0, 80, 120, 0.45),
             rgba(0, 80, 120, 0.45)
         ),
         url("https://images.unsplash.com/photo-1597357821540-3dc1852ef417?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
-
     color: white;
-
     border-radius: 0 0 30px 30px; /* Rounded corners at the bottom */
 }
-
 h1 {
     font-size: 3.5rem; /* Large font size for the catchy phrase */
     margin-bottom: 10px;
     font-weight: 700;
 }
-
 header p {
     font-size: 1rem; /* Larger font size for the introduction */
     opacity: 0.9; /* Slightly transparent for a softer look */
     margin:auto;
     max-width:  600px; /* Limit the width of the introduction text */
 }
-
 /* ===== Sections ===== */
-
 section {
     padding: 35px;
     margin: 40px auto;
@@ -62,23 +49,17 @@ section {
     transition: transform 0.3s ease; /* Smooth transition for shadow */
     opacity: 0.8s ease;
     transform: 0.8s ease;
-
 }
-
  section.show {
     opacity: 1;
-
     transform: translateY(0);
  }
-
  /* ===== Section Titles ===== */
-
 h2 { /* Styling for section headings */
     font-size: 2rem; /* Larger font size for section headings */
     margin-bottom: 15px;
     color: #0369a1
 }
-
 /* ===== Gallery ===== */
 .gallery {
     display: grid; /* Responsive images */
@@ -86,7 +67,6 @@ h2 { /* Styling for section headings */
     gap: 20px; /* Space between images */
     margin-top: 20px; /* Space above the image grid */
 }
-
 .gallery img {
     width: 100%; /* Make images responsive */
     border-radius: 18px; /* Rounded corners for images */
@@ -94,11 +74,9 @@ h2 { /* Styling for section headings */
     object-fit: cover; /* Cover the entire container */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
-
 .gallery img:hover {
     transform: scale(1.03); /* Slight zoom on hover */
 }
-
 /* ===== Footer ===== */
 footer {
     background-color: #0f172a; /* Button color */
@@ -109,12 +87,10 @@ footer {
     background-color: #0f172a; /* Pointer cursor on hover */
     font-size: 0.9em; /* Font size for button text */
 }
-
 /* Smooth scrolling effect */
 html {
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
-
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
     h1 {
@@ -125,7 +101,6 @@ html {
     }
 }
 /* Fade animation */
-
 /* 順番に表示 */
 section:nth-of-type(1) {
     animation-delay: 0.3s;
@@ -141,15 +116,10 @@ section:nth-of-type(4) {
 }
 /* アニメーション */
 @keyframes fadeUp {
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
-
 }
 /* ボタン */
 #openMapButton {
@@ -168,7 +138,6 @@ box-shadow:
 z-index: 100;
 font-weight: bold;
 }
-
 #openMapButton:hover {
     transform: translateY(-3px);
     background: #f97316;
@@ -214,7 +183,6 @@ padding-bottom: 80px;
 #overlay.show .overlay-content {
 transform: translateY(0);
 }
-
 /* 水族館カード */
 .aquarium-card {
     background: rgba(255, 255, 255, 0, 92);
@@ -227,26 +195,22 @@ transform: translateY(0);
     width: 100%;
     box-sizing: border-box;
 }
-
 .aquarium-card h3 {
     margin: 0 0 8px 0;
     font-size: 1.3rem;
     color: whitesmoke;
 }
-
 .aquarium-location {
     font-size: 0.9rem;
     color: #fb923c; /* 少し明るいグレーで見やすく */
     font-weight: bold;
     margin-bottom: 8px;
 }
-
 .aquarium-desc {
     font-size: 0.95rem;
     color: #e2e8f0;
     margin: 0;
 }
-
 /* 閉じる */
 #closeButton {
 position: absolute;
@@ -268,7 +232,6 @@ transition: background 0.3s ease;
 box-shadow:
     0 10px 30px rgba(0,0,0,0.15);
 }
-
 #closeButton:hover {
 background: rgba(255, 255, 255, 0.3);
 }

@@ -9,10 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-
     <header>
         <h1>Discover the Charm of Sea Otters</h1>
         <p>Learn about the ecology...
@@ -32,7 +29,6 @@
     <button id="closeButton">
         ×
     </button>
-
     <h2>ラッコに会える主な水族館</h2>
     <div class="aquarium-card">
         <h3>🇯🇵 鳥羽水族館</h3>
@@ -61,8 +57,6 @@
             </div>
         </div>
     </div>
-
-
  <main>
     <section id="ecology">
             <h2>生態</h2>
@@ -81,31 +75,25 @@
             <h2>フォトギャラリー</h2>
             <div class="gallery">
                 <img src="https://images.unsplash.com/photo-1751060763279-a52348b9aaf3?q=80&w=1069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-                <img src="https://images.unsplash.com/photo-1633967920376-33b2d94f091f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-            
+                <img src="https://images.unsplash.com/photo-1633967920376-33b2d94f091f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">   
      </section>
     </main>
     <footer>
         <p>© 2026 Otter World.
             All rights reserved. 
         </p>
-
     </footer>
-
     <script>
         // ボタンの開閉処理
         const openButton = document.getElementById("openMapButton");
         const closeButton = document.getElementById("closeButton");
         const overlay = document.getElementById("overlay");
-
         openButton.addEventListener("click", () => {
             overlay.classList.add("show");
         });
-
         closeButton.addEventListener("click", () => {
             overlay.classList.remove("show");
         });
-
         // スクロールアニメーション
         const sections = document.querySelectorAll("section");
         const observer = new IntersectionObserver((entries) => {
