@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
 
     <header>
         <h1>Discover the Charm of Sea Otters</h1>
@@ -20,33 +22,110 @@
         「デザイン思考とロジックモデル」
         講義の一環で作成されています(チームI)
     </p>
+    </header>
+
+    <button id="openMapButton">
+ラッコに会える場所
+</button>
+<div id="overlay">
+<div class="overlay-content">
+    <button id="closeButton">
+        ×
+    </button>
+
+    <h2>ラッコに会える主な水族館</h2>
+    <div class="aquarium-card">
+        <h3>🇯🇵 鳥羽水族館</h3>
+         <div class="aquarium-location">📍 日本 / 三重県鳥羽市</div>
+                <p class="aquarium-desc">日本で唯一、飼育されているラッコ（メイとキラ）に会うことができる貴重な水族館です。</p>
+            </div>
+    <div class="aquarium-card">
+        <h3>🇺🇸 モントレーベイ水族館</h3>
+        <div class="aquarium-location">📍 アメリカ / カリフォルニア州</div>
+                <p class="aquarium-desc">海洋生物の保護研究で世界的に知られており、ラッコの生態や海洋環境について深く学ぶことができます。</p>
+            </div>
+    <div class="aquarium-card">
+        <h3>🇺🇸 シアトル水族館</h3>
+        <div class="aquarium-location">📍 アメリカ / ワシントン州</div>
+                <p class="aquarium-desc"><p class="aquarium-desc">アラスカや太平洋沿岸の海洋生態系について学べる展示が充実しており、ラッコ保護教育にも力を入れています。</p>
+            </div>
+    <div class="aquarium-card">
+        <h3>🇨🇦 バンクーバー水族館</h3>
+      　<div class="aquarium-location">📍 カナダ / ブリティッシュコロンビア州</div>
+                <p class="aquarium-desc">親とはぐれてしまった野生のラッコを保護し、新しい環境で安心して暮らせるよう支援しています。</p>
+            </div> 
+    <div class="aquarium-card">
+        <h3>🇵🇹 リスボン海洋水族館</h3>
+        <div class="aquarium-location">📍 ポルトガル / リスボン</div>
+                <p class="aquarium-desc"><p class="aquarium-desc">ヨーロッパ有数の水族館として知られ、海洋生態系について学べる展示とともにラッコの魅力を楽しむことができます。</p>
+            </div>
+        </div>
+    </div>
 
 
-    <main>
-        <section id="ecology">
+ <main>
+    <section id="ecology">
             <h2>生態</h2>
             <p>ラッコは海洋生態系の重要な一部であり、海藻の森を保護する役割を果たしています。彼らは貝類やウニを食べることで、海のバランスを保っています。</p>
         </section>
-        <section id="conservation">
+     <section id="conservation">
             <h2>保護</h2>
             <p>ラッコは絶滅の危機に瀕しており、保護活動が行われています。私たちは彼らの生息地を守り、持続可能な方法で海洋資源を利用することが重要です。</p>
         </section>
-        <section id="current-status">
-            <h2>現在の状況</h2>
-            <p>日本では、ラッコを見ることができる唯一の水族館は鳥羽水族館です。ここでは、彼らの生態や保護活動について学ぶことができます。</p>
+     <section id="history">
+            <h2>歴史</h2>
+            <p>個体数の減少やワシントン条約による輸入規制の影響により、国内で飼育されるラッコは年々減少しています。現在、日本でラッコを見る事が出来るのは鳥羽水族館のみとなりました<div class=""></div>
+            </p>
         </section>
-        <section id="photos">
-            <h2>
+     <section id="photos">
+            <h2>フォトギャラリー</h2>
             <div class="gallery">
                 <img src="https://images.unsplash.com/photo-1751060763279-a52348b9aaf3?q=80&w=1069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                 <img src="https://images.unsplash.com/photo-1633967920376-33b2d94f091f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             
-        </section>
+     </section>
     </main>
     <footer>
-        <p>© 2026 Otter WOrld.
+        <p>© 2026 Otter World.
             All rights reserved. 
         </p>
+
     </footer>
+
+    <script>
+        // ボタンの開閉処理
+        const openButton = document.getElementById("openMapButton");
+        const closeButton = document.getElementById("closeButton");
+        const overlay = document.getElementById("overlay");
+
+        openButton.addEventListener("click", () => {
+            overlay.classList.add("show");
+        });
+
+        closeButton.addEventListener("click", () => {
+            overlay.classList.remove("show");
+        });
+
+        // スクロールアニメーション
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+        sections.forEach((section) => { observer.observe(section); });
+    </script>
 </body>
+<html lang="ja">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラッコの魅力</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
 </html>
+
